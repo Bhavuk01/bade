@@ -10,42 +10,45 @@
 
   <link rel="stylesheet" href="./login.css"> 
 
+
+  <script>
+    function handleLogin() {
+        var keyInput = document.getElementById("keyInput").value;
+        if (keyInput.toLowerCase() === "demo") {
+            fetch('demo.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("demoContent").innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching demo.html:', error));
+        } else {
+            // Add any other actions or messages for incorrect key
+        }
+    }
+</script>
+
+
  </head> 
 
  <body> <!-- partial:index.partial.html --> 
 
   <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
 
-   <div class="signin"> 
-
-    <div class="content"> 
-
-     <h2>Login</h2> 
-
-     <div class="form"> 
-
-      <div class="inputBox"> 
-
-       <input type="text" required> <i>Username</i> 
-
-      </div> 
-
-      <div class="inputBox"> 
-
-       <input type="password" required> <i>Password</i> 
-
-
-      <div class="inputBox"> 
-
-       <input type="submit" value="Login"> 
-
-      </div> 
-
-     </div> 
-
-    </div> 
-
-   </div> 
+    <div class="signin"> 
+        <div class="content"> 
+            <h2>Login</h2> 
+            <div class="form"> 
+                <div class="inputBox"> 
+                    <input type="text" required> <i>ENTER KEY </i> 
+                </div> 
+                <div class="inputBox"> 
+                    <input type="submit" value="Login" onclick="handleLogin()"> 
+                    <p class="buy"><a href="https://www.instagram.com/">No Key ? Buy Now</a></p>
+                </div> 
+            </div> 
+        </div> 
+    </div>
+    
 
   </section> <!-- partial --> 
 
