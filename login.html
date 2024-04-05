@@ -68,7 +68,7 @@
     </div>
   </div>
   
-  <script>
+<script>
     document.addEventListener('DOMContentLoaded', function () {
         const loginForm = document.getElementById('loginForm');
 
@@ -90,11 +90,18 @@
                         sessionStorage.setItem('expirationTime', expirationTime);
                         window.location.href = "DemoAccess.html"; // Redirect to demoaccess.html for demotesting key
                     } else if (keys.includes(password)) {
-                        // Set session variables for login status and expiration time (1 hour)
-                        sessionStorage.setItem('loggedIn', 'true');
-                        const expirationTime = new Date().getTime() + (60 * 60 * 1000); // 1 hour in milliseconds
-                        sessionStorage.setItem('expirationTime', expirationTime);
-                        window.location.href = "beta.html"; // Redirect to index.html for correct keys
+                        // Check if the key has already been used
+                        if (localStorage.getItem(password)) {
+                            alert("This key has already been used.");
+                        } else {
+                            // Set session variables for login status and expiration time (1 hour)
+                            sessionStorage.setItem('loggedIn', 'true');
+                            const expirationTime = new Date().getTime() + (60 * 60 * 1000); // 1 hour in milliseconds
+                            sessionStorage.setItem('expirationTime', expirationTime);
+                            window.location.href = "beta.html"; // Redirect to index.html for correct keys
+                            // Mark the key as used in localStorage
+                            localStorage.setItem(password, 'used');
+                        }
                     } else {
                         alert("Incorrect key. Please try again.");
                     }
@@ -124,6 +131,7 @@
         setInterval(checkExpiration, 60000); // 60000 milliseconds = 1 minute
     });
 </script>
+
 
 
 
