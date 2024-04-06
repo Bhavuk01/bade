@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  const isLoggedIn = sessionStorage.getItem('loggedIn');
+  const isDemoUser = sessionStorage.getItem('demouser'); // Check if demouser session variable is set
+  
+  if (!isLoggedIn) {
+    // Redirect to the login page if not logged in
+    window.location.href = 'login.html';
+  } 
+   </script>
+<link rel="icon" href="https://stake.com/apple-touch-icon.png" type="image/png">
+<title>Mine Strategy</title>
+<style>
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #0F212E;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    color: #008CBA;
+    margin-bottom: 20px;
+    animation: pulse 1s infinite alternate;
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+
+  p {
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  button {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    animation: slideIn 1s ease;
+  }
+
+  button:hover {
+    background-color: #005b7f;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .disclaimer {
+    font-size: 10px;
+    color: #555;
+    margin-top: 5px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Mine strategy</h1>
+  <p>Start with small bets, like 10 rupees, based on how much money you have. Make sure you enter the right client ID into our tool, or it won't give accurate predictions. Also, check the MINE number on both the official platform and our tool.</p>
+
+  <p>Begin with small bets and pick the same gem shown in our tool. You might lose a few times at first, but don't worry. Stick to low bets and try to cash out after 4-5 gems. Once you've had some success, you can try betting more, like 50 rupees, and aim to cash out at 1.7x or 2x the initial bet. With some good luck, you can make a profit of 500-1000 rupees.</p>
+  
+  <p>If you find a pattern that works on our platform but then lose it on the official one, stick to the same pattern on our platform instead of trying something new.</p>
+  <p>
+    Additionally, you can follow the 10-20-40-80 process, which means starting with 10 rupees; if you lose, double the bet amount and continue this process until reaching 80 rupees, then start again from 10 rupees. Note that it's quite risky working with us, which is why we are sharing this strategy.
+  </p>
+  <button onclick="redirectToIndex()">
+    Click to Use the prediction tool. </button>
+  <p class="disclaimer">Note: We are not responsible for any losses. This is for educational purposes only. Use at your own risk.</p>
+</div>
+
+<script>
+function redirectToIndex() {
+  window.location.href = 'beta.html';
+}
+</script>
+</body>
+</html>
